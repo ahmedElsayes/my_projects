@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Notespage from "./Notespage";
 import Mainform from "./loging_files/Mainform";
-import About from "./About";
+import Jobs from "../jobsPage/Jobs";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
                 <Link to="/">Notes editing</Link>
               </li>
               <li className="nav-item nav-link">
-                <Link to="/about">About</Link>
+                <Link to="/jobs">Jobs</Link>
               </li>
               <li className="nav-item nav-link">
                 <Link to="/register">Registration</Link>
@@ -33,8 +33,8 @@ function App() {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/about">
-              <About />
+            <Route path="/jobs">
+              <Jobs />
             </Route>
             <Route path="/register">
               <Mainform />

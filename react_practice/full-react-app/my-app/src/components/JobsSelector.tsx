@@ -1,12 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 
-type jobProp = {
+export type jobProp = {
   title: string;
   jobtype: string;
   category: string;
   jobstatus: string;
-  selected: string
+  selected?: string;
 }
 type props = {
   jobs: jobProp[];
@@ -41,8 +41,8 @@ export default function JobsSelector({jobs, onJobSelect}: props) {
         >
           <h4>Title: <span> {job.title} </span></h4>
           <p>Job Type: <span> {job.title} </span></p>
-          <p>Job Category <span> {job.title} </span></p>
-          <p>Job Status <span> {job.title} </span></p>
+          <p>Job Category: <span> {job.title} </span></p>
+          <p>Job Status: <span> {job.title} </span></p>
         </div>
       )
     })}

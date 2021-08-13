@@ -10,7 +10,8 @@ body {
   background: #eee;
   padding: 0 16px;
 }
-
+ul {list-style-type: none;}
+a {text-decoration: unset !important;}
 header {
   background-color: #2393fc;
   margin: auto -16px;
@@ -179,4 +180,35 @@ footer p {
   background-color:#2393fc;
   color: #ffffff;
   transform: rotate(20deg);
+}
+
+.job-card {
+  width: 100%;
+  padding: 20px;
+  background-color: aliceblue;
+  min-height: 100px;
+  cursor: pointer;
+}
+.job-card:hover {
+  opacity: 0.7;
+}
+.job-card.active {
+  background-color: lightskyblue;
+}
+.job-card p {
+  color: #6d6d6d;
+}
+.job-card span {
+  margin-left: 50px;
+  font-weight: bold;
+}
+.job-card h4 span {
+  font-size: large;
+}
+.job-details {
+  width: 100%;
+  padding: 50px;
+}
+.job-details h4, .job-details p {
+  margin: 20px auto;
 }

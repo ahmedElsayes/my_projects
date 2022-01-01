@@ -33,7 +33,7 @@ function Notespage() {
       return number * 2;
     })
   })
-  console.log(newScore);
+  // console.log(newScore);
 
   return (
     <div>

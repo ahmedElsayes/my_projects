@@ -5,46 +5,31 @@ import Footer from "./Footer";
 import Notespage from "./Notespage";
 import Mainform from "./loging_files/Mainform";
 import Jobs from "../jobsPage/Jobs";
+import HookExamples from "../HookExamples/HookExamples";
 
 function App() {
   return (
     <div>
       <Header />
-      <Router>
         <div>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="/">
-              Navbar
-            </a>
-            <ul className="navbar-nav mr-auto" id="navbarNavAltMarkup">
-              <li className="nav-link">
-                <Link to="/">Notes editing</Link>
-              </li>
-              <li className="nav-item nav-link">
-                <Link to="/jobs">Jobs</Link>
-              </li>
-              <li className="nav-item nav-link">
-                <Link to="/register">Registration</Link>
-              </li>
-            </ul>
-            <hr />
-          </nav>
-
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
+          <Route path="/hooks">
+              <HookExamples />
+            </Route>
             <Route path="/jobs">
               <Jobs />
             </Route>
             <Route path="/register">
               <Mainform />
             </Route>
-            <Route path="/">
+            <Route path="/" exact>
               <Notespage />
             </Route>
+
           </Switch>
         </div>
-      </Router>
       <Footer />
     </div>
   );

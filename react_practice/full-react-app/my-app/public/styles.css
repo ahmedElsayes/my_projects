@@ -257,3 +257,9 @@ footer p {
   text-align: center;
   color: var(--heading-color);
 }
+.special-outline {
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid var(--heading-color);
+  border-radius: 10px;
+}

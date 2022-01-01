@@ -1,7 +1,7 @@
 :root {
   --first-color: #2393fc;
   --tag-background: #e0ffff;
-  --second-color: #fff;
+  --second-color: #ffffff;
   --heading-color: #6a6a6a; 
   --cancel-color: #FF3A46;
   --success-color: #7ef0ac;
@@ -243,6 +243,7 @@ footer p {
 /* hooks page */
 .hooks-page {
   display: flex;
+  flex-direction: column;
 }
 .fixed-position {
   position: fixed;
@@ -250,4 +251,8 @@ footer p {
   padding: 10px;
   background: white;
   font-weight: bold;;
+}
+.section-head {
+  text-align: center;
+  color: var(--heading-color);
 }

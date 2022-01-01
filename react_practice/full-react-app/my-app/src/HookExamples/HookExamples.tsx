@@ -1,7 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function HookExamples() {
   const [buttonVal, setButtonVal] = useState("")
+
+  // Now we will check the mount and unmount phases and update phase
+  useEffect(() => {
+    // console.log("Component mounted: ", buttonVal)
+    console.log("updated component: ", buttonVal)
+    // return () => {
+    //   console.log("unMounted!!: ", buttonVal)
+    // }
+  }, [buttonVal])
 
   return (
     <div className='container'>
@@ -17,7 +26,7 @@ export default function HookExamples() {
         </div>
       </div>
 
-      <div className="row justify-content-center align-items-center mt-5">
+      <div className="row justify-content-center align-items-center mt-5 mb-5">
         <h2>{buttonVal}</h2>
       </div>
     </div>

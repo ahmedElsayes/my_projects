@@ -240,3 +240,14 @@ footer p {
 .job-details h4, .job-details p {
   margin: 20px auto;
 }
+/* hooks page */
+.hooks-page {
+  display: flex;
+}
+.fixed-position {
+  position: fixed;
+  left: 0px;
+  padding: 10px;
+  background: white;
+  font-weight: bold;;
+}

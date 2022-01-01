@@ -1,7 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 export default function UseRefExplainer() {
   const [jobName, setJobName] = useState("")
+  // const [counts, setCounts] = useState(1)
+  const counts = useRef(1)
+  useEffect(() => {
+    // setCounts(prevCount => prevCount+1)
+    counts.current = counts.current+1
+  }, [jobName])
+  console.log(jobName, counts)
   return (
     <>
       <hr />
@@ -22,7 +29,7 @@ export default function UseRefExplainer() {
         <div className='row justify-content-center align-items-center mt-5 mb-5'>
           <div className='col-md-4 col-xs-12'>
             <h2> Job Name: {jobName} </h2>
-            <h5> Count of Entries: </h5>
+            <h5> Count of Entries: {counts.current}</h5>
           </div>
         </div>
       </div>

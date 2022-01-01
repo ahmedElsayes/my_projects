@@ -89,6 +89,7 @@ footer p {
 .special-button {
   border: 2px solid var(--first-color);
   padding: 10px 30px;
+  margin: 10px 5px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
